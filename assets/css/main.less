@@ -1,0 +1,1454 @@
+@import "_mixins.less";
+
+/***** BASICS *****/
+
+@font-face {
+  font-family: GT America;
+  src: url(../font/GT-America-Standard-Regular.woff2);
+}
+@font-face {
+  font-family: GT America Bold;
+  src: url(../font/GT-America-Standard-Bold.woff2);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+div.clear {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+	color: #F8F6F5;
+}
+
+a:hover {
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	box-shadow: 0 -1px 0 0 #282828 inset, 0 -2px 0 0 #CECDCC inset;
+}
+
+a::-moz-selection {
+	color: white;
+	background: #282828;
+	text-shadow: none;
+}
+
+a::selection {
+	color: white;
+	background: #282828;
+	text-shadow: none;
+}
+
+.hide {
+	display: none;
+}
+
+a.not-textlink {
+	box-shadow: none;
+}
+
+/************************
+LAYOUT
+************************/
+
+body {
+	font-family: 'GT America', sans-serif;
+	background: #282828;
+	position: relative;
+	text-align: left;
+	color: #F8F6F5;
+}
+
+html {
+	color: #F8F6F5;
+	text-align: center;
+	scroll-behavior: smooth;
+}
+
+div.wrapper {
+	width: 88%;
+	padding: 0 6%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+/************************
+NAVIGATION
+************************/
+
+nav {
+	width: 88%;
+	padding: 0 6%;
+	max-width: 1440px;
+	margin: 0 auto 220px auto;
+	overflow: auto;
+	padding-top: 30px;
+
+	label {
+		display: none;
+	}
+	input {
+		display: none;
+	}
+	a.home {
+		float: left;
+		margin: 3px 30px 0 0;
+		font-family: 'GT America Bold', sans-serif;
+
+		span {
+			font-family: 'GT America', sans-serif;
+		}
+	}
+	menu {
+		float: left;
+
+		li {
+			float: left;
+			list-style: none;
+			margin-right: 30px;
+			font-size: 16px;
+		}
+		 li.mobile-contact {
+			 display: none;
+		 }
+	}
+	ul.contact {
+		float: right;
+
+		li {
+			float: left;
+			list-style: none;
+			margin-left: 30px;
+		}
+
+	}
+}
+
+/************************
+HEADER
+************************/
+
+/************************
+SECTIONS
+************************/
+
+section {
+	border-top: 1px solid #F8F6F5;
+	padding: 50px 0 130px 0;
+	overflow: auto;
+
+	h2 {
+		font-family: 'GT America Bold', sans-serif;
+		font-size: 47px;
+		float: left;
+
+	}
+	div.description {
+		width: 700px;
+		float: right;
+		font-size: 20px;
+		line-height: 1.5;
+		margin-top: 10px;
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		ul {
+			margin-left: 0px;
+
+			li {
+				list-style:none;
+				margin-bottom: 8px;
+
+				span {
+					float: left;
+					width: 15px;
+					height: 15px;
+					.border-radius(30px);
+					background: #F8F6F5;
+					margin: 8px 10px 0 0;
+				}
+			}
+		}
+
+	}
+}
+
+/************************
+404
+************************/
+section#error-404 {
+	border-top: 0px;
+	padding: 0 0 130px 0;
+
+	.title {
+		font-size: 120px;
+	}
+
+	p {
+		font-size: 25px;
+		margin-bottom: 15px;
+	}
+}
+
+/************************
+INTRO
+************************/
+
+section#intro {
+	border-top: 0px;
+	padding: 0 0 0 0;
+
+	.intro-wrapper {
+		clear: both;
+		width: 750px;
+		padding-left: 120px;
+		margin-bottom: 220px;
+
+		div.am-left {
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 72px;
+			margin-left: -120px;
+			float: left;
+
+			strong {
+				float:left;
+			}
+			span {
+				font-size: 36px;
+				float: left;
+				margin-top: 12px;
+			}
+		}
+		h1 {
+			float: left;
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 72px;
+			line-height: 1.39;
+			letter-spacing: -2.52px;
+			margin-bottom: 60px;
+
+			b {
+				background: #3CFF4B;
+				color: #282828;
+				padding: 0 16px;
+				display: inline !important;
+
+				.mobile-br {
+					display: none;
+				}
+			}
+
+		}
+
+		section.cd-intro {
+			overflow: visible;
+			padding: 0;
+			border: 0;
+		}
+
+
+
+		/* stare pred 21.7.
+		@keyframes text1 {
+		  0%, 50%, 100% {
+		    width: 0;
+		  }
+		  10%, 40% {
+		    width: 9em;
+		  }
+		}
+
+		@keyframes text2 {
+		  0%, 50%, 100% {
+		    width: 0;
+		  }
+
+		  60%, 90% {
+		    width: 9.5em;
+		  }
+		}
+		@keyframes text3 {
+		  0%, 50%, 100% {
+		    width: 0;
+		  }
+
+		  60%, 90% {
+		    width: 9.5em;
+		  }
+		}
+		@keyframes text4 {
+		  0%, 50%, 100% {
+		    width: 0;
+		  }
+
+		  60%, 90% {
+		    width: 9.5em;
+		  }
+		}
+
+
+		.text_1 {
+		  animation: text1;
+		}
+		.text_2 {
+		  animation: text2;
+		}
+		.text_3 {
+		  animation: text3;
+		}
+		.text_4 {
+		  animation: text4;
+		}
+		.text_1, .text_2, .text_3, .text_4 {
+		  overflow: hidden;
+		  white-space: nowrap;
+		  display: inline-block;
+		  position: relative;
+		  animation-duration: 10s;
+		  animation-timing-function: steps(25, end);
+		  animation-iteration-count: infinite;
+		}
+		*/
+
+
+		p {
+			clear: both;
+			font-size: 20px;
+			letter-spacing: 0.3px;
+			line-height: 1.5;
+
+			br {
+				display: none;
+			}
+			br.mobile {
+				display: block;
+			}
+		}
+		div.action {
+			margin-top: 45px;
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 20px;
+			letter-spacing: 0.3px;
+
+			a.button {
+				background: #F8F6F5;
+				color: #282828;
+				padding: 1px 15px 4px 15px;
+				.border-radius(41px);
+				margin-right: 45px;
+				float: left;
+
+			}
+			a.button:hover {
+				background: #3CFF4B;
+			}
+			a.process {
+				padding-right: 28px;
+				background: url(../img/sipka_dolu.svg) 99% center no-repeat;
+			}
+			a.process:hover {
+				box-shadow: none;
+				color:#3CFF4B;
+				background: url(../img/sipka_dolu_hover.svg) 99% center no-repeat;
+			}
+		}
+	}
+}
+
+/************************
+HOW WE WORK
+************************/
+
+section#how-we-work {
+
+	ul {
+		clear: both;
+		float: left;
+		margin-top: 125px;
+
+		li {
+			list-style: none;
+			padding: 0 0 30px 100px;
+			margin: 0;
+			width: 630px;
+			float: left;
+			clear: both;
+			border-right: 2px solid #F8F6F5;
+			min-height: 180px;
+			position: relative;
+
+			span.number {
+				font-size: 30px;
+				display: inline-block;
+				margin-right: 90px;
+			}
+			strong {
+				font-family: 'GT America Bold', sans-serif;
+				font-size: 47px;
+				display: inline-block;
+				margin-top: 0px;
+			}
+			span.icon {
+				width: 180px;
+				height: 180px;
+				float: right;
+				background-color: #3CFF4B;
+				background-size: 90%;
+				background-position: center center;
+				.border-radius(180px);
+				margin: -60px -107px 0 0;
+			}
+			span.dot {
+				width: 25px;
+				height: 25px;
+				float: right;
+				background: #F8F6F5;
+				.border-radius(25px);
+				border: 3px solid #282828;
+				margin: 0 -16px 0 0;
+				display: block;
+			}
+			span.arrow {
+				width: 98px;
+				height: 71px;
+				display: block;
+				background: #F8F6F5;
+				position: absolute;
+				right: -50px;
+				bottom: -16px;
+				background: url(../img/arrow-how-we-work.svg) 0 0 no-repeat;
+				background-size: contain;
+			}
+		}
+		li:hover {
+			/*span.icon {
+				animation: fadeIn;
+			  	animation-duration: 0.2s;
+				opacity: 1;
+			}
+			span.dot {
+				display: none;
+			}*/
+		}
+		li.step1 {
+			span.dot {
+				margin-top: 0;
+			}
+
+			span.icon {
+				background-image: url(../img/ico1.png);
+			}
+		}
+		li.step2 span.icon {
+			background-image: url(../img/ico2.png);
+		}
+		li.step3 span.icon {
+			background-image: url(../img/ico3.png);
+		}
+		li.step4 span.icon {
+			background-image: url(../img/ico4.png);
+		}
+		li.step5 span.icon {
+			background-image: url(../img/ico5.png);
+		}
+		li.step6 span.icon {
+			background-image: url(../img/ico6.png);
+		}
+		li:last-child {
+			padding-bottom: 60px;
+		}
+	}
+}
+
+
+/************************
+CLIENTS
+************************/
+
+section#clients {
+	border-top: 0;
+
+	h2 {
+		float: none;
+		margin-bottom: 130px;
+	}
+
+
+
+	ul {
+		li {
+			list-style: none;
+			font-size: 15px;
+			border-top: 1px solid #F8F6F5;
+			padding: 20px 1px 130px 1px;
+			letter-spacing: 0.6px;
+			overflow: auto;
+			display: block;
+
+			h3 {
+				font-size: 47px;
+				letter-spacing: -0.94px;
+				float: left;
+				width: 400px;
+			}
+			p {
+				float: left;
+				width: 500px;
+				margin-top: 10px;
+				line-height: 1.5;
+			}
+			a.web {
+				float: right;
+				margin-top: 10px;
+			}
+		}
+		li:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+
+
+/************************
+TEAM
+************************/
+
+section#team {
+	border-top: none;
+
+	h2 {
+		float: none;
+		margin-bottom: 100px;
+	}
+
+	ul {
+		list-style: none;
+
+		li.left {
+			margin-left: 30px;
+			padding: 20px 120px 30px 0;
+
+			div.photo {
+				float: left;
+				margin: -55px 120px 0 -32px;
+			}
+		}
+		li.right {
+			margin-right: 30px;
+			padding: 20px 0 30px 120px;
+
+			div.photo {
+				float: right;
+				margin: -55px -32px 0 0;
+			}
+		}
+
+		li {
+			border: 1px solid #F8F6F5;
+			margin-bottom: 95px;
+
+			div.text {
+				float: left;
+				width: 550px;
+				letter-spacing: 0.3px;
+
+				h3 {
+					font-size: 47px;
+					margin-bottom: 30px;
+				}
+				p, a.mail {
+					font-size: 20px;
+					line-height: 1.5;
+				}
+				a.mail {
+					margin-top: 60px;
+					display: inline-block;
+					font-size: 15px;
+				}
+			}
+
+			div.photo {
+				width: 431px;
+				height: 370px;
+				background-size: cover;
+
+				img {
+					width: 431px;
+					display: none;
+				}
+			}
+			div.photo-honza {
+				background-image: url(../img/foto/honza_bw.jpg);
+			}
+			div.photo-misa {
+				background-image: url(../img/foto/misa_bw.jpg);
+			}
+			div.photo-vojta {
+				background-image: url(../img/foto/vojta_bw.jpg);
+			}
+		}
+		li:hover {
+			div.photo {
+			-webkit-transition: background .2s ease;
+			transition: background .2s ease;
+				background-size: cover;
+			}
+			div.photo-honza {
+				background-image: url(../img/foto/honza.jpg);
+			}
+			div.photo-misa {
+				background-image: url(../img/foto/misa.jpg);
+			}
+			div.photo-vojta {
+				background-image: url(../img/foto/vojta.jpg);
+			}
+		}
+	}
+}
+
+
+
+/************************
+FOOTER
+************************/
+
+footer {
+	background: #282828;
+	color: #F8F6F5;
+	padding: 20px 0 20px 0;
+
+	div.text {
+		width: 70%;
+		max-width: 785px;
+		float: left;
+		h2 {
+			font-size: 47px;
+			margin-bottom: 85px;
+
+			div.am-left {
+				float: left;
+				float: left;
+				margin-right: 10px;
+
+				strong {
+					float: left;
+				}
+				span {
+					font-size: 23px;
+					float: left;
+					margin-top: 12px;
+
+				}
+			}
+			strong.highlighted {
+				font-family: 'GT America Bold', sans-serif;
+				color: #3CFF4B;
+			}
+		}
+
+	}
+	div.contact {
+		float: right;
+		width: 30%;
+		max-width: 430px;
+
+		h3 {
+			font-size: 15px;
+			letter-spacing: 0.6px;
+			padding-top: 5px;
+			border-top: 1px solid #F8F6F5;
+		}
+		a, span.phone {
+			display: inline-block;
+			font-size: 30px;
+			margin: 30px 0 90px 0;
+		}
+	}
+	div.statement {
+		letter-spacing: 0.72px;
+		font-size: 12px;
+		color: #F8F6F5;
+		margin: 20px 0 0 0;
+		clear: left;
+
+		ul {
+			margin-top: 20px;
+
+			li {
+				display: inline-block;
+
+				span {
+					display: inline-block;
+					padding: 0 15px;
+				}
+			}
+		}
+	}
+	p#cookies {
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		background: #323232;
+		.border-radius(28px);
+		padding: 15px 10px 15px 25px;
+		font-size: 16px;
+		letter-spacing: 0.24px;
+		z-index: 2;
+
+		button {
+			padding: 4px 15px;
+			color: #282828;
+			background: #F8F6F5;
+			text-decoration: none;
+			.border-radius(41px);
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 18px;
+			letter-spacing: 0.3px;
+			display: inline-block;
+			margin-left: 15px;
+			border: 0;
+
+		}
+		button:hover {
+			box-shadow: none;
+			background: #3CFF4B;
+			cursor: pointer;
+		}
+		button:active {
+			outline: none;
+		}
+	}
+}
+
+
+
+
+/************************
+MOBILE CSS
+************************/
+
+@media (max-width: 1400px) {
+
+	section#service {
+		div.description {
+			width: 60%;
+		}
+	}
+	section#team {
+		ul {
+			li {
+				div.text {
+				width: 60%;
+
+				}
+				div.photo {
+					width: 30%;
+					min-width: 350px;
+					height: 300px;
+					background-size: contain;
+				}
+			}
+			li.right {
+				padding-left: 5%;
+			}
+			li.left {
+				padding-right: 5%;
+
+				div.photo {
+					margin-right: 5%;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	nav {
+		menu {
+
+			li {
+				margin-right: 15px;
+			}
+		}
+		ul.contact {
+			li {
+				margin-left: 15px;
+			}
+		}
+	}
+	section {
+		h2 {
+			margin-bottom: 60px;
+			float: none;
+			display: block;
+		}
+		div.description {
+			width: 70%;
+			float: none;
+			clear: both;
+		}
+	}
+	section#clients {
+		ul {
+			li {
+				padding: 20px 1px 100px 1px;
+
+				h3 {
+					font-size: 47px;
+					width: 30%;
+				}
+				p {
+					width: 50%;
+				}
+			}
+		}
+	}
+	section#team {
+		ul {
+			li {
+				div.text {
+				margin-top: 30px;
+				width: 50%;
+
+				}
+				div.photo {
+					width: 30%;
+					min-width: 350px;
+					height: 300px;
+					background-size: contain;
+				}
+			}
+			li.left {
+
+				div.photo {
+					margin-right: 5%;
+				}
+			}
+		}
+	}
+	footer {
+
+		div.text {
+			width: 65%;
+
+			h2 {
+				font-size: 35px;
+
+				div.am-left {
+					margin-right: 10px;
+
+					span {
+						font-size: 18px;
+						margin-top: 7px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 990px) {
+	nav {
+		width: 100%;
+		margin: 0 auto 220px auto;
+
+		a.home {
+			margin: 3px 15px 0 0;
+		}
+		ul.contact {
+			display: none;
+		}
+	}
+	.intro-wrapper {
+		width: 100%;
+		padding-left: 0;
+		margin-bottom: 140px;
+		overflow: auto;
+
+		div.am-left {
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 50px;
+			float: none;
+			display: block;
+			margin-left: 0;
+
+			strong {
+				float: left;
+			}
+			span {
+				font-size: 30px;
+				float: left;
+				margin-top: 7px;
+			}
+
+		}
+		h1 {
+			font-size: 50px;
+			margin-bottom: 60px;
+			margin-top: -10px;
+			letter-spacing: -0.31px;
+			clear: both;
+		}
+		p {
+			clear: both;
+			font-size: 20px;
+			letter-spacing: 0.3px;
+			line-height: 1.5;
+		}
+	}
+	section#how-we-work {
+
+		ul {
+			width: 80%;
+
+			li {
+				width: 88%;
+				padding-left: 5%;
+
+				span.number {
+					margin-right: 15%;
+				}
+			}
+		}
+	}
+	section#clients {
+		ul {
+			li {
+				padding: 20px 1px 100px 1px;
+
+				h3, p {
+					float: none;
+					width: 100%;
+					margin-bottom: 30px;
+				}
+				a.web {
+					float: none;
+				}
+			}
+		}
+	}
+	section#team {
+		ul {
+			li {
+				div.photo {
+					margin-bottom: 30px !important;
+				}
+				div.text {
+					width: 50%;
+				}
+			}
+		}
+	}
+	footer {
+		div.statement {
+			ul li span {
+				padding: 0 5px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 850px) {
+	section {
+		padding-bottom: 80px;
+	}
+	section#service {
+		div.description {
+			width: 100%;
+		}
+	}
+	section#team {
+		ul {
+			li {
+				div.text {
+					width: 80%;
+					float: none;
+					clear: both;
+				}
+				div.photo {
+					width: 25%;
+					min-width: 350px;
+					height: 300px;
+					background-size: contain;
+				}
+			}
+			li.left {
+				padding: 20px 0 30px 5%;
+				margin-right: 30px;
+
+				div.photo {
+					float: right;
+					margin-right: -32px;
+				}
+			}
+			li.right {
+				div.photo {
+					float: right;
+				}
+			}
+		}
+	}
+	footer {
+		div.text {
+			width: 88%;
+			float: none;
+
+			h2 {
+				font-size: 35px;
+
+				div.am-left {
+					margin-right: 10px;
+
+					span {
+						font-size: 18px;
+						margin-top: 7px;
+					}
+				}
+			}
+		}
+		div.contact {
+			float: none;
+			width: 100%;
+			max-width: 100%;
+
+			a, span.phone {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+@media (max-width: 650px) {
+
+	/* Show Hamburger */
+	 #page-nav  {
+	   width: 100%;
+	   padding: 15px 0 10px 0;
+	   margin-top: 0;
+	   position: fixed;
+	   top: 0;
+	   left: 0;
+	   background: #282828;
+	   z-index: 2;
+
+	 }
+	 #page-nav label {
+	   font-style: normal;
+	   font-size: 1.2em;
+	   color: #F8F6F5;
+	   width: 30px;
+	   height: 15px;
+	   float: right;
+	   background: url(../img/ico_menu_open.svg) 0 0 no-repeat;
+	   text-indent: -9999px;
+	   margin: 7px 4% 0 25px;
+	   display: block;
+	   cursor: pointer;
+	 }
+	 #page-nav label.active {
+	   background: url(../img/ico_menu_close.svg) 0 0 no-repeat;
+	 }
+	 nav#page-nav a.home {
+	 	margin-left: 4%;
+	 }
+	 #page-nav input {
+		 display: none;
+	 }
+
+	 /* Break down menu items into vertical */
+
+	 #page-nav menu {
+		 width: 100%;
+		 min-height: 100vh;
+		 margin-top: 20px;
+		 border-bottom: 1px solid #E9E9E9;
+		 position: relative;
+		 z-index: 100;
+
+		 li {
+	        display: block;
+			float: none;
+		    border-top: 1px solid #E9E9E9;
+			color: #F8F6F5;
+			margin: 0 4%;
+			padding: 0 0;
+			font-size: 16px;
+			text-align: left;
+			width: 92%;
+
+			a {
+				color: #F8F6F5;
+				display: block;
+				padding: 15px 0 15px 0;
+
+				&:hover {
+					box-shadow: none;
+				}
+			}
+	     }
+		 li.mobile-contact {
+			 display: block;
+			 border-top: none;
+			 position: absolute;
+			 bottom: 150px;
+			 left: 4%;
+			 line-height: 0.8;
+			 margin: 0;
+
+			 a {
+				 padding: 10px 0 10px 0;
+			 }
+
+		 }
+	 }
+	 #page-nav menu li.home {
+		 margin-top: 0;
+		 float: none;
+
+		 a {
+			 font-size: 16px;
+		 }
+	 }
+
+	 /* Toggle show/hide menu on checkbox click */
+
+	 @keyframes appear {
+	     0% {
+	         opacity: 0;
+	     }
+	     100% {
+	         opacity: 1;
+	     }
+	 }
+
+	 #page-nav menu {
+		display: none;
+		opacity: 0;
+		animation: appear 2s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	 }
+	 #page-nav input:checked ~ menu {
+		 display: block;
+		 transition: opacity 1s ease;
+		 opacity: 1;
+	}
+
+	nav {
+		margin-bottom: 110px;
+
+		ul.contact {
+			display: none;
+		}
+	}
+	.intro-wrapper {
+		margin-bottom: 140px;
+		padding-top: 60px;
+
+		div.am-left {
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 30px;
+			margin-left: 0;
+			display: block;
+
+			strong {
+				float:left;
+			}
+			span {
+				font-size: 20px;
+				float: left;
+				margin-top: 3px;
+			}
+
+		}
+		h1 {
+			font-size: 31px;
+			margin-bottom: 60px;
+			letter-spacing: -0.31px;
+
+			b {
+				padding: 0 8px;
+
+				.mobile-br {
+					display: inline;
+				}
+			}
+		}
+		p {
+			font-size: 18px;
+			letter-spacing: 0.09px;
+
+			br {
+				display: block;
+			}
+		}
+		div.action {
+			a.button {
+				float: left;
+				margin-bottom: 30px;
+			}
+			a.process {
+				display: inline-block;
+				float: left;
+				clear: both;
+				box-shadow: none;
+			}
+		}
+	}
+	section {
+		h2 {
+			font-size: 25px;
+			margin-bottom: 40px;
+		}
+		div.description {
+			font-size: 18px;
+		}
+	}
+	section#how-we-work {
+
+		div.description {
+			width: 100%;
+		}
+		ul {
+			width: 50%;
+			margin: 120px auto 0 auto;
+
+			li {
+				width: 100%;
+				padding: 0;
+
+				span.number {
+					float: left;
+					font-size: 24px;
+					padding: 0 0 10px 0;
+					width: 60px;
+					margin-right: 0;
+				}
+				 strong {
+					float: left;
+					clear: both;
+					font-size: 24px;
+				}
+				span.dot {
+					margin-top: -65px;
+				}
+				span.icon {
+					margin-top: -120px;
+					margin-right: -75px;
+					width: 150px;
+					height: 150px;
+				}
+			}
+			li.step1 {
+				span.dot {
+					margin-top: -65px;
+				}
+				span.icon {
+					margin-top: -120px;
+				}
+			}
+		}
+	}
+	section#clients {
+		h2 {
+			margin-bottom: 60px;
+		}
+	}
+	footer {
+		div.statement ul li {
+			display: block;
+			margin-bottom: 8px;
+
+			span {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 480px) {
+	nav {
+		ul.contact {
+			display: none;
+		}
+	}
+	section#how-we-work {
+		ul {
+			li {
+
+				span.number {
+					font-size: 18px;
+				}
+				 strong {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	section#team {
+		padding-bottom: 60px;
+
+		div.wrapper {
+			width: 100%;
+			padding: 0;
+
+			h2 {
+				padding: 0 6%;
+			}
+
+			li.left div.photo, li.right div.photo {
+					margin-right: -31px;
+			}
+
+			ul li div.text {
+				h3 {
+					font-size: 25px;
+					margin-bottom: 15px;
+				}
+				p {
+					font-size: 18px;
+
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		div.text h2 {
+
+			span.am-left span {
+				font-family: 'GT America', sans-serif;
+				font-size: 13px;
+				margin-top: 5px;
+			}
+			font-size: 25px;
+			font-family: 'GT America Bold', sans-serif;
+
+			br {
+				display: none;
+			}
+		}
+		p#cookies {
+			bottom: 30px;
+			right: auto;
+			left: 50%;
+			margin-left: -150px;
+
+		}
+	}
+}
+@media (max-width: 375px) {
+	nav {
+		ul.contact {
+			display: none;
+		}
+	}
+	.intro-wrapper {
+		div.am-left {
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 30px;
+			margin-left: 0;
+			display: block;
+
+			strong {
+				float:left;
+			}
+			span {
+				font-size: 20px;
+				float: left;
+				margin-top: 3px;
+			}
+
+		}
+		h1 {
+			font-size: 31px;
+			margin-bottom: 60px;
+
+			strong {
+				background: #3CFF4B;
+				color: #282828;
+				padding: 0 10px;
+				display: inline;
+			}
+
+		}
+		div.action {
+			margin-top: 45px;
+			font-family: 'GT America Bold', sans-serif;
+			font-size: 20px;
+			letter-spacing: 0.3px;
+
+			a.button {
+				background: #F8F6F5;
+				color: #282828;
+				padding: 1px 15px 4px 15px;
+				.border-radius(41px);
+				margin-right: 45px;
+				float: left;
+
+			}
+			a.button:hover {
+				background: #3CFF4B;
+			}
+			a.process {
+
+				span.text {
+					float: left;
+				}
+				span.ico {
+					display: inline-block;
+					float: left;
+					width: 25px;
+					height: 25px;
+					background: url(../img/sipka_dolu.svg) 0 0 no-repeat;
+					margin: 7px 0 0 10px;
+				    -webkit-transition: all .3s ease-out;
+				    transition: all .3s ease-out;
+				}
+			}
+			a.process:hover {
+				color:#3CFF4B;
+
+				span.ico {
+					background: url(../img/sipka_dolu_hover.svg) 0 0 no-repeat;
+				    -webkit-transition: all .3s ease-out;
+				    transition: all .3s ease-out;
+				}
+			}
+		}
+	}
+
+
+}
+@media (max-width: 360px) {
+
+	section#how-we-work {
+		ul {
+			width: 70%;
+
+			li {
+
+				span.number {
+					font-size: 18px;
+				}
+				 strong {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+}
