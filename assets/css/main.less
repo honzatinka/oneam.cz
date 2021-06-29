@@ -215,114 +215,48 @@ section#intro {
 		width: 750px;
 		padding-left: 120px;
 		margin-bottom: 220px;
-
-		div.am-left {
-			font-family: 'GT America Bold', sans-serif;
-			font-size: 72px;
-			margin-left: -120px;
-			float: left;
-
-			strong {
-				float:left;
-			}
-			span {
-				font-size: 36px;
-				float: left;
-				margin-top: 12px;
-			}
-		}
-		h1 {
-			float: left;
-			font-family: 'GT America Bold', sans-serif;
-			font-size: 72px;
-			line-height: 1.39;
-			letter-spacing: -2.52px;
-			margin-bottom: 60px;
-
-			b {
-				background: #3CFF4B;
-				color: #282828;
-				padding: 0 16px;
-				display: inline !important;
-
-				.mobile-br {
-					display: none;
-				}
-			}
-
-		}
-
+		
 		section.cd-intro {
 			overflow: visible;
 			padding: 0;
 			border: 0;
+
+			div.am-left {
+				font-family: 'GT America Bold', sans-serif;
+				font-size: 72px;
+				margin-left: -120px;
+				float: left;
+
+				strong {
+					float:left;
+				}
+				span {
+					font-size: 36px;
+					float: left;
+					margin-top: 12px;
+				}
+			}
+			h1 {
+				float: left;
+				font-family: 'GT America Bold', sans-serif;
+				font-size: 72px;
+				line-height: 1.39;
+				letter-spacing: -2.52px;
+				margin-bottom: 60px;
+
+				b {
+					background: #3CFF4B;
+					color: #282828;
+					padding: 0 16px;
+					display: inline !important;
+
+					.mobile-br {
+						display: none;
+					}
+				}
+
+			}
 		}
-
-
-
-		/* stare pred 21.7.
-		@keyframes text1 {
-		  0%, 50%, 100% {
-		    width: 0;
-		  }
-		  10%, 40% {
-		    width: 9em;
-		  }
-		}
-
-		@keyframes text2 {
-		  0%, 50%, 100% {
-		    width: 0;
-		  }
-
-		  60%, 90% {
-		    width: 9.5em;
-		  }
-		}
-		@keyframes text3 {
-		  0%, 50%, 100% {
-		    width: 0;
-		  }
-
-		  60%, 90% {
-		    width: 9.5em;
-		  }
-		}
-		@keyframes text4 {
-		  0%, 50%, 100% {
-		    width: 0;
-		  }
-
-		  60%, 90% {
-		    width: 9.5em;
-		  }
-		}
-
-
-		.text_1 {
-		  animation: text1;
-		}
-		.text_2 {
-		  animation: text2;
-		}
-		.text_3 {
-		  animation: text3;
-		}
-		.text_4 {
-		  animation: text4;
-		}
-		.text_1, .text_2, .text_3, .text_4 {
-		  overflow: hidden;
-		  white-space: nowrap;
-		  display: inline-block;
-		  position: relative;
-		  animation-duration: 10s;
-		  animation-timing-function: steps(25, end);
-		  animation-iteration-count: infinite;
-		}
-		*/
-
-
 		p {
 			clear: both;
 			font-size: 20px;
@@ -671,10 +605,15 @@ footer {
 			padding-top: 5px;
 			border-top: 1px solid #F8F6F5;
 		}
-		a, span.phone {
+		a {
 			display: inline-block;
 			font-size: 30px;
-			margin: 30px 0 90px 0;
+			margin: 50px 0 22px 0;
+		}
+		span.phone {
+			display: inline-block;
+			font-size: 30px;
+			margin: 0 0 90px 0;
 		}
 	}
 	div.statement {
@@ -856,11 +795,17 @@ MOBILE CSS
 				}
 			}
 		}
+		div.contact {
+			a {
+				margin: 25px 0 5px 0;
+			}
+		}
 	}
 }
 @media (max-width: 990px) {
 	nav {
 		width: 100%;
+		padding: 0;
 		margin: 0 auto 220px auto;
 
 		a.home {
@@ -870,41 +815,46 @@ MOBILE CSS
 			display: none;
 		}
 	}
-	.intro-wrapper {
-		width: 100%;
-		padding-left: 0;
-		margin-bottom: 140px;
-		overflow: auto;
+	section#intro {
+		.intro-wrapper {
+			width: 100%;
+			padding-left: 0;
+			margin-bottom: 140px;
+			overflow: auto;
+		
+			section.cd-intro {
+			
+				div.am-left {
+					font-family: 'GT America Bold', sans-serif;
+					font-size: 50px;
+					float: none;
+					display: block;
+					margin-left: 0;
 
-		div.am-left {
-			font-family: 'GT America Bold', sans-serif;
-			font-size: 50px;
-			float: none;
-			display: block;
-			margin-left: 0;
+					strong {
+						float: left;
+					}
+					span {
+						font-size: 30px;
+						float: left;
+						margin-top: 7px;
+					}
 
-			strong {
-				float: left;
+				}
+				h1 {
+					font-size: 50px;
+					margin-bottom: 60px;
+					margin-top: -10px;
+					letter-spacing: -0.31px;
+					clear: both;
+				}
 			}
-			span {
-				font-size: 30px;
-				float: left;
-				margin-top: 7px;
+			p {
+				clear: both;
+				font-size: 20px;
+				letter-spacing: 0.3px;
+				line-height: 1.5;
 			}
-
-		}
-		h1 {
-			font-size: 50px;
-			margin-bottom: 60px;
-			margin-top: -10px;
-			letter-spacing: -0.31px;
-			clear: both;
-		}
-		p {
-			clear: both;
-			font-size: 20px;
-			letter-spacing: 0.3px;
-			line-height: 1.5;
 		}
 	}
 	section#how-we-work {
@@ -954,6 +904,11 @@ MOBILE CSS
 		div.statement {
 			ul li span {
 				padding: 0 5px;
+			}
+		}
+		div.contact {
+			a, span.phone {
+				font-size: 25px;
 			}
 		}
 	}
@@ -1025,6 +980,9 @@ MOBILE CSS
 
 			a, span.phone {
 				font-size: 22px;
+			}
+			span.phone {
+				display: block;
 			}
 		}
 	}
@@ -1153,60 +1111,65 @@ MOBILE CSS
 			display: none;
 		}
 	}
-	.intro-wrapper {
-		margin-bottom: 140px;
-		padding-top: 60px;
+	section#intro {
+		.intro-wrapper {
+			margin-bottom: 140px;
+			padding-top: 60px;
+		
+			section.cd-intro {
+				div.am-left {
+					font-family: 'GT America Bold', sans-serif;
+					font-size: 30px;
+					margin-left: 0;
+					display: block;
 
-		div.am-left {
-			font-family: 'GT America Bold', sans-serif;
-			font-size: 30px;
-			margin-left: 0;
-			display: block;
+					strong {
+						float:left;
+					}
+					span {
+						font-size: 20px;
+						float: left;
+						margin-top: 3px;
+					}
 
-			strong {
-				float:left;
+				}
+				h1 {
+					font-size: 31px;
+					margin-bottom: 60px;
+					letter-spacing: -0.31px;
+
+					b {
+						padding: 0 8px;
+
+						.mobile-br {
+							display: inline;
+						}
+					}
+				}
 			}
-			span {
-				font-size: 20px;
-				float: left;
-				margin-top: 3px;
+			p {
+				font-size: 18px;
+				letter-spacing: 0.09px;
+
+				br {
+					display: block;
+				}
 			}
-
-		}
-		h1 {
-			font-size: 31px;
-			margin-bottom: 60px;
-			letter-spacing: -0.31px;
-
-			b {
-				padding: 0 8px;
-
-				.mobile-br {
-					display: inline;
+			div.action {
+				a.button {
+					float: left;
+					margin-bottom: 30px;
+				}
+				a.process {
+					display: inline-block;
+					float: left;
+					clear: both;
+					box-shadow: none;
 				}
 			}
 		}
-		p {
-			font-size: 18px;
-			letter-spacing: 0.09px;
-
-			br {
-				display: block;
-			}
-		}
-		div.action {
-			a.button {
-				float: left;
-				margin-bottom: 30px;
-			}
-			a.process {
-				display: inline-block;
-				float: left;
-				clear: both;
-				box-shadow: none;
-			}
-		}
 	}
+	
 	section {
 		h2 {
 			font-size: 25px;
@@ -1356,82 +1319,85 @@ MOBILE CSS
 			display: none;
 		}
 	}
-	.intro-wrapper {
-		div.am-left {
-			font-family: 'GT America Bold', sans-serif;
-			font-size: 30px;
-			margin-left: 0;
-			display: block;
+	section#intro {
+		.intro-wrapper {
+		
+			section.cd-intro {
+				div.am-left {
+					font-family: 'GT America Bold', sans-serif;
+					font-size: 30px;
+					margin-left: 0;
+					display: block;
 
-			strong {
-				float:left;
+					strong {
+						float:left;
+					}
+					span {
+						font-size: 20px;
+						float: left;
+						margin-top: 3px;
+					}
+
+				}
+				h1 {
+					font-size: 31px;
+					margin-bottom: 60px;
+
+					strong {
+						background: #3CFF4B;
+						color: #282828;
+						padding: 0 10px;
+						display: inline;
+					}
+
+				}
 			}
-			span {
+			div.action {
+				margin-top: 45px;
+				font-family: 'GT America Bold', sans-serif;
 				font-size: 20px;
-				float: left;
-				margin-top: 3px;
-			}
+				letter-spacing: 0.3px;
 
-		}
-		h1 {
-			font-size: 31px;
-			margin-bottom: 60px;
-
-			strong {
-				background: #3CFF4B;
-				color: #282828;
-				padding: 0 10px;
-				display: inline;
-			}
-
-		}
-		div.action {
-			margin-top: 45px;
-			font-family: 'GT America Bold', sans-serif;
-			font-size: 20px;
-			letter-spacing: 0.3px;
-
-			a.button {
-				background: #F8F6F5;
-				color: #282828;
-				padding: 1px 15px 4px 15px;
-				.border-radius(41px);
-				margin-right: 45px;
-				float: left;
-
-			}
-			a.button:hover {
-				background: #3CFF4B;
-			}
-			a.process {
-
-				span.text {
+				a.button {
+					background: #F8F6F5;
+					color: #282828;
+					padding: 1px 15px 4px 15px;
+					.border-radius(41px);
+					margin-right: 45px;
 					float: left;
-				}
-				span.ico {
-					display: inline-block;
-					float: left;
-					width: 25px;
-					height: 25px;
-					background: url(../img/sipka_dolu.svg) 0 0 no-repeat;
-					margin: 7px 0 0 10px;
-				    -webkit-transition: all .3s ease-out;
-				    transition: all .3s ease-out;
-				}
-			}
-			a.process:hover {
-				color:#3CFF4B;
 
-				span.ico {
-					background: url(../img/sipka_dolu_hover.svg) 0 0 no-repeat;
-				    -webkit-transition: all .3s ease-out;
-				    transition: all .3s ease-out;
+				}
+				a.button:hover {
+					background: #3CFF4B;
+				}
+				a.process {
+
+					span.text {
+						float: left;
+					}
+					span.ico {
+						display: inline-block;
+						float: left;
+						width: 25px;
+						height: 25px;
+						background: url(../img/sipka_dolu.svg) 0 0 no-repeat;
+						margin: 7px 0 0 10px;
+					    -webkit-transition: all .3s ease-out;
+					    transition: all .3s ease-out;
+					}
+				}
+				a.process:hover {
+					color:#3CFF4B;
+
+					span.ico {
+						background: url(../img/sipka_dolu_hover.svg) 0 0 no-repeat;
+					    -webkit-transition: all .3s ease-out;
+					    transition: all .3s ease-out;
+					}
 				}
 			}
 		}
 	}
-
-
 }
 @media (max-width: 360px) {
 
